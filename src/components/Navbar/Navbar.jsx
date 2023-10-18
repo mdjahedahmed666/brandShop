@@ -6,13 +6,13 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink  activeClassName="active" to="/">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink  activeClassName="active" to="/addproduct">Add Product</NavLink>
+        <NavLink to="/addproduct">Add Product</NavLink>
       </li>
       <li>
-        <NavLink  activeClassName="active" to="/mycart">My Cart</NavLink>
+        <NavLink to="/mycart">My Cart</NavLink>
       </li>
     </>
   );
