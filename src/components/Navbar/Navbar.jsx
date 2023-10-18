@@ -2,7 +2,7 @@
 
 const Navbar = () => {
   return (
-    <div>Navbar is comming soon</div>
+    <div>Navbar is comming very soon</div>
   )
 }
 
