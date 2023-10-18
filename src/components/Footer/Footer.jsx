@@ -7,17 +7,14 @@ const Footer = () => {
     <footer className="footer">
     <div>
       <div
-        className="grid md:grid-cols-2 bg-cover container mx-auto px-4 md:px-32"
-        style={{ backgroundImage: "url(https://i.ibb.co/ng58MJ7/13.jpg)" }}
+        className="grid md:grid-cols-2 bg-cover container mx-auto px-4 md:px-32 py-20"
+        style={{ backgroundImage: "url(https://i.ibb.co/p4pLvFs/10.png)" }}
       >
         <div className="flex justify-center">
           <div>
           <div>
-            <div className="mb-2 md:mb-4 w-20">
-              <img className="w-full"  alt="Coffee" />
-            </div>
             <h2 className="mb-4 md:mb-8 text-2xl md:text-5xl font-rancho text-[#331A15]">
-              Espresso Emporium
+              Brand Shop
             </h2>
           </div>
           <p className="text-base md:text-xl font-raleway leading-7 md:leading-9 mb-5">
@@ -62,34 +59,11 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <div>
-            <h2 className="mb-4 md:mb-7 text-2xl md:text-5xl font-rancho text-[#331A15]">
-              Get in Touch
-            </h2>
-            <div className="flex items-center gap-3">
-              <AiFillPhone className="text-base md:text-xl w-4 md:w-6 text-[#331A15]" />
-              <p className="text-sm md:text-xl font-raleway leading-7 md:leading-9">
-                +88 01533 333 333
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdEmail className="text-base md:text-xl w-4 md:w-6 text-[#331A15]" />
-              <p className="text-sm md:text-xl font-raleway leading-7 md:leading-9">
-                info@gmail.com
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaLocationDot className="text-base md:text-xl w-4 md:w-6 text-[#331A15]" />
-              <p className="text-sm md:text-xl font-raleway leading-7 md:leading-9">
-                72, Wall street, King Road, Dhaka
-              </p>
-            </div>
-          </div>
           </div>
         </div>
-        <div className="md:mt-28">
+        <div className="">
           <h2 className="mb-4 md:mb-8 text-2xl md:text-5xl font-rancho text-[#331A15]">
-            Connect with Us
+            Provide your Feedback
           </h2>
           <form className="card-body w-full">
             <div className="form-control">
@@ -132,12 +106,12 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="footer footer-center p-4 bg-base-300 text-base-content"
-        style={{ backgroundImage: "url(https://i.ibb.co/dDSdwn2/24.jpg)" }}
+        className="footer footer-center p-4 bg-base-300 text-base-content bg-cover"
+        style={{ backgroundImage: "url(https://i.ibb.co/nj180g9/11.png)" }}
       >
         <aside>
-          <p className="font-rancho text-xl text-white">
-            Copyright © 2023 - All right reserved by Espresso Emporium
+          <p className="font-rancho text-xl text-black">
+            Copyright © 2023 - All right reserved by Brand Shop
           </p>
         </aside>
       </div>
