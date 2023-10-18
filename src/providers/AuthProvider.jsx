@@ -1,10 +1,12 @@
 import { createContext, useState } from "react";
+import { getAuth } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
-
+const auth = getAuth(app);
 export const AuthContext = createContext(null);
 
 
-const AuthProvider = () => {
+const AuthProvider = ({children}) => {
     const [user, setUsere] = useState(null);
     const [loading, setULoading] = useState(true);
 
@@ -13,7 +15,9 @@ const AuthProvider = () => {
         loading,
     }
   return (
-    <AuthContext.Provider value={authInfo}>AuthProvider</AuthContext.Provider>
+    <AuthContext.Provider value={authInfo}>
+      {children}
+    </AuthContext.Provider>
   )
 }
 
