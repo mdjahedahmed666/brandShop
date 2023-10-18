@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner/Banner";
+import Benefit from "../../components/Benefit/Benefit";
 import BrandType from "../../components/BrandType/BrandType";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner/>
       <BrandType/>
+      <Benefit/>
     </div>
   )
 }
