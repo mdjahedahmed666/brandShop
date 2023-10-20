@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const { name, brandName, type, price, shortDescription, photo, rating } =
+  const { _id,name, brandName, type, price, shortDescription, photo, rating } =
     product;
   return (
     <div>
@@ -25,7 +26,7 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="card-actions flex justify-center py-5">
             <button className="btn btn-primary">Update</button>
-            <button className="btn btn-primary">Details</button>
+            <Link to={`/productDetails/${_id}`} className="btn btn-primary">Details</Link>
           </div>
         </div>
       </div>

@@ -103,7 +103,6 @@ const Footer = () => {
         </div>
         <div
           className="footer footer-center p-4 bg-base-300 text-base-content bg-cover"
-          style={{ backgroundImage: "url(https://i.ibb.co/nj180g9/11.png)" }}
         >
           <aside>
             <p className="font-rancho text-xl text-black">
