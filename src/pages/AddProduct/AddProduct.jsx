@@ -34,6 +34,8 @@ const AddProduct = () => {
                 text: 'Product is added successfully',
                 confirmButtonText: 'Cool'
               })
+              // Reset the form input fields
+        form.reset();
             }
            
         })

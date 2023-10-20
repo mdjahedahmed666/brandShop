@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const MyCart = () => {
+  const { user } = useContext(AuthContext);
+  const { email } = user || {};
+
+
   const [myCart, setMyCart] = useState([]);
   const handleDelete = (_id) => {
     console.log(_id);
@@ -39,7 +44,8 @@ const MyCart = () => {
     fetch("http://localhost:3000/myCart")
       .then((res) => res.json())
       .then((data) => {
-        setMyCart(data);
+        const userCart = data.filter(user => user.userEmail===email);
+        setMyCart(userCart);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

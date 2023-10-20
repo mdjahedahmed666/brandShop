@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
+  const { user } = useContext(AuthContext);
+  const { email } = user || {};
+  console.log(email);
   const [product, setProduct] = useState([]);
   const { name, brandName, price,type, shortDescription, photo, rating } =
     product;
@@ -21,6 +25,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     // You can customize the product data to send to the server
     const productData = {
+      userEmail: email,
       name,
       brandName,
       type,

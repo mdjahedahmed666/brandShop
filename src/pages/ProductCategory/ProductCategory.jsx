@@ -34,7 +34,7 @@ const ProductCategory = () => {
       <Slider className="h-full w-3/4" {...sliderSettings}>
           {category.map((product, index) => (
             <div key={index} className="h-40 md:h-96">
-              <img src={product.photo} className="w-full h-full" alt={`Product ${index}`} />
+              <img src={product.photo} className="w-full h-full" alt={product.name} />
             </div>
           ))}
         </Slider>

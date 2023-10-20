@@ -7,8 +7,8 @@ const ProductCard = ({ product }) => {
   return (
     <div>
       <div className="bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10">
-          <img src={photo} alt="Shoes" className="rounded-xl" />
+        <figure className="px-10 pt-10 h-72">
+          <img src={photo} alt="Shoes" className="rounded-xl h-full flex-grow" />
         </figure>
         <div className="items-center text-center">
           <div className="flex justify-around items-center my-4">
