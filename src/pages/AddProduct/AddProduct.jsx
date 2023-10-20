@@ -27,12 +27,15 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            Swal.fire({
+            if(data.insertedId){
+              Swal.fire({
                 icon: 'success',
                 title: 'Success!',
                 text: 'Product is added successfully',
                 confirmButtonText: 'Cool'
               })
+            }
+           
         })
 
     };

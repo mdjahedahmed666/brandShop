@@ -56,7 +56,7 @@ const Navbar = () => {
         <NavLink to="/addproduct">Add Product</NavLink>
       </li>
       <li>
-        <NavLink to="/mycart">My Cart</NavLink>
+        <NavLink to="/myCart">My Cart</NavLink>
       </li>
     </>
   );

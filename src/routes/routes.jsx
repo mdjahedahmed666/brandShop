@@ -43,7 +43,7 @@ import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
        },
        {
         path: "/myCart",
-        element: <MyCart/>,
+        element: <PrivateRoute><MyCart/></PrivateRoute>,
        },
        {
         path: "/login",

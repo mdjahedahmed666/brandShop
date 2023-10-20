@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState([]);
-  const { name, brandName, price, shortDescription, photo, rating } =
+  const { name, brandName, price,type, shortDescription, photo, rating } =
     product;
   const { id } = useParams();
   useEffect(() => {
@@ -16,6 +17,41 @@ const ProductDetails = () => {
         console.error("Error fetching data:", error);
       });
   }, [id]);
+
+  const handleAddToCart = () => {
+    // You can customize the product data to send to the server
+    const productData = {
+      name,
+      brandName,
+      type,
+      price,
+      shortDescription,
+      photo,
+      rating,
+    };
+
+    //send data to the server
+    fetch("http://localhost:3000/addToCart/", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Cart is added successfully",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
+  };
+
   return (
     <div className="my-16 container mx-auto px-4 md:px-32">
       <div className="card lg:card-side bg-base-300 shadow-sm rounded-none p-10">
@@ -24,18 +60,26 @@ const ProductDetails = () => {
         </figure>
         <div className="card-body">
           <div>
-          <h2 className="card-title font-rancho text-2xl font-bold p-5">{name}</h2>
-          <p className="pl-5 font-raleway text-yellow-500">Rating {rating} out of 5</p>
+            <h2 className="card-title font-rancho text-2xl font-bold p-5">
+              {name}
+            </h2>
+            <p className="pl-5 font-raleway text-yellow-500">
+              Rating {rating} out of 5
+            </p>
           </div>
           <div className="pl-5 mt-5">
-          <p className="font-rancho font-bold text-2xl mb-2">£{price}</p>
-          <p className="font-raleway">Brand: {brandName}</p>
+            <p className="font-rancho font-bold text-2xl mb-2">£{price}</p>
+            <p className="font-raleway">Brand: {brandName}</p>
           </div>
           <div className="pl-5 mb-10">
-          <p className="font-raleway text-xl text-gray-400">{shortDescription}</p>
+            <p className="font-raleway text-xl text-gray-400">
+              {shortDescription}
+            </p>
           </div>
           <div className="card-actions justify-center w-1/2 flex">
-            <button className="btn btn-info w-full">Add to card</button>
+            <button onClick={handleAddToCart} className="btn btn-info w-full">
+              Add to card
+            </button>
             <button className="btn btn-info w-full">Buy now</button>
           </div>
         </div>
