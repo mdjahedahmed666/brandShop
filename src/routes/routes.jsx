@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import ProductCategory from "../pages/ProductCategory/ProductCategory";
 
   const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ import AddProduct from "../pages/AddProduct/AddProduct";
        {
         path: "/addproduct",
         element: <AddProduct/>,
+       },
+       {
+        path: "/products/:brandName",
+        element: <ProductCategory/>,
        },
        {
         path: "/login",

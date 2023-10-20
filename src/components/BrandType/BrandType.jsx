@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link} from "react-router-dom";
 
 const BrandType = () => {
   const [brandType, setBrandType] = useState([]);
@@ -8,6 +9,7 @@ const BrandType = () => {
       .then((res) => res.json())
       .then((data) => setBrandType(data));
   }, []);
+
   return (
     <div className="container mx-auto px-4 md:px-32 mt-16">
       <div className="mb-10 text-2xl font-rancho font-bold text-center">
@@ -31,9 +33,9 @@ const BrandType = () => {
                   <p className="font-raleway mt-2">{brand.shortDescription}</p>
                 </div>
               </div>
-              <div className="card-actions justify-center">
+              <Link to={`/products/${brand.name}`} className="card-actions justify-center">
                 <button className="btn font-rancho">Explore</button>
-              </div>
+              </Link>
             </div>
           </div>
         ))}

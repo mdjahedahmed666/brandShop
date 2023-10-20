@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "A Wonderful Experience",
+        "message": "I had a wonderful experience working with this company. Their professionalism and dedication to quality were truly impressive.",
+        "name": "John Smith",
+        "address": "123 Main Street, Anytown, USA",
+        "image_url": "https://i.ibb.co/WFc7zdc/sumudu-mohottige-b-Igpii04-UIg-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Highly Recommend!",
+        "message": "I highly recommend the services provided by this team. They exceeded my expectations in every way.",
+        "name": "Emily Johnson",
+        "address": "456 Oak Avenue, Another City, USA",
+        "image_url": "https://i.ibb.co/WFc7zdc/sumudu-mohottige-b-Igpii04-UIg-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Outstanding Service",
+        "message": "The level of service and attention to detail I received from this company was outstanding. I couldn't be happier with the results.",
+        "name": "Michael Davis",
+        "address": "789 Elm Road, Someplace, USA",
+        "image_url": "https://i.ibb.co/WFc7zdc/sumudu-mohottige-b-Igpii04-UIg-unsplash.jpg"
+    }
+]
