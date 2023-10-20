@@ -17,6 +17,33 @@ const Register = () => {
     const email = form.get('email');
     const password = form.get('password');
 console.log(name, photo, email, password);
+const newUser = {name, photo, email, password};
+
+const passwordRegex = /^(?=.*[A-Z])(?=.*[\W_]).{6,}$/;
+if (!passwordRegex.test(password)) {
+  setError("Invalid password. Password must be at least 6 characters long and contain at least one capital letter and one special character.");
+  return;
+}
+
+//send data to the server
+fetch("http://localhost:3000/users", {
+  method: "POST",
+  headers: {
+      "content-type": "application/json"
+  },
+  body: JSON.stringify(newUser)
+})
+.then(res => res.json())
+.then(data => {
+  console.log(data);
+  // Swal.fire({
+  //     icon: 'success',
+  //     title: 'Success!',
+  //     text: 'User is added successfully',
+  //     confirmButtonText: 'Cool'
+  //   })
+})
+
 
 setError("")
     createUser(email, password)

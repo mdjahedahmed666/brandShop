@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
             <p>{brandName}</p>
           </div>
           <div className="card-actions flex justify-center py-5">
-            <button className="btn btn-primary">Update</button>
+            <Link to={`/updateProduct/${_id}`}className="btn btn-primary">Update</Link>
             <Link to={`/productDetails/${_id}`} className="btn btn-primary">Details</Link>
           </div>
         </div>
