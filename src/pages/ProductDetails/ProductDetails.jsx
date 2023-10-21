@@ -12,7 +12,7 @@ const ProductDetails = () => {
     product;
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3000/product/${id}`)
+    fetch(`https://server-8rotzm9qc-mdjahedahmed12-gmailcom.vercel.app/product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
     };
 
     //send data to the server
-    fetch('http://localhost:3000/addToCart', {
+    fetch('https://server-8rotzm9qc-mdjahedahmed12-gmailcom.vercel.app/addToCart', {
       method: "POST",
       headers: {
         "content-type": "application/json",

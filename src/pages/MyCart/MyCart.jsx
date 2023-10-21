@@ -22,7 +22,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
        
-        fetch(`http://localhost:3000/addToCart/${_id}`,{
+        fetch(`https://server-8rotzm9qc-mdjahedahmed12-gmailcom.vercel.app/addToCart/${_id}`,{
           method: 'DELETE'
         })
         .then((res) => res.json())
@@ -41,7 +41,7 @@ const MyCart = () => {
 
   };
   useEffect(() => {
-    fetch('http://localhost:3000/myCart')
+    fetch('https://server-8rotzm9qc-mdjahedahmed12-gmailcom.vercel.app/myCart')
       .then((res) => res.json())
       .then((data) => {
         const userCart = data.filter(user => user.userEmail===email);

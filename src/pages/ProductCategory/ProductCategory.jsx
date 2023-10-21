@@ -10,7 +10,7 @@ const ProductCategory = () => {
   const [category, setCategory] = useState([]);
   const { brandName } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${brandName}`)
+    fetch(`https://server-8rotzm9qc-mdjahedahmed12-gmailcom.vercel.app/products/${brandName}`)
       .then((res) => res.json())
       .then((data) => {
         setCategory(data);

@@ -19,3 +19,5 @@ Five key point about the project:
 *Responsive Design: Responsive design is implemented for displaying data to different devices. For example mobile and desktop.
 
 Client site live link: https://assignment10-b3631.web.app/
+
+pre: https://server-lbn0sd85i-mdjahedahmed12-gmailcom.vercel.app
