@@ -5,13 +5,14 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
+
   const [userData, setUserData] = useState([]);
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (user && user?.email) {
-      fetch("http://localhost:3000/users")
+      fetch('http://localhost:3000/users')
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -60,6 +61,8 @@ const Navbar = () => {
       </li>
     </>
   );
+
+
   return (
     <div className="container mx-auto px-4 md:px-32 bg-base-150">
       <div className="navbar">
@@ -100,21 +103,24 @@ const Navbar = () => {
           {user ? (
             <div>
               <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src={userData.photo} />
-        </div>
-      </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li className=" text-lg mb-2 text-center">{userData.name}</li>
-        <li
-                onClick={handleLogOut}
-                className="btn btn-ghost text-purple-400 text-lg"
-              >
-                Logout
-              </li>
-      </ul>
-    </div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={userData.photo} />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li className=" text-lg mb-2 text-center">{userData.name}</li>
+                  <li
+                    onClick={handleLogOut}
+                    className="btn btn-ghost text-purple-400 text-lg"
+                  >
+                    Logout
+                  </li>
+                </ul>
+              </div>
               {/* <p className=" font-rancho">{userData.name}</p>
               <button
                 onClick={handleLogOut}

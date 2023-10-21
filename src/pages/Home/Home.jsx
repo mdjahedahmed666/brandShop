@@ -12,8 +12,9 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setTestimonial(data));
   }, []);
+  
   return (
-    <div>
+    <div className="dark:bg-black">
       <Banner/>
       <BrandType/>
       <Benefit/>

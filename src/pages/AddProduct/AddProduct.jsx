@@ -17,7 +17,7 @@ const AddProduct = () => {
         const newProduct = {name, brandName, type, price, shortDescription, photo, rating}
 
         //send data to the server
-        fetch("http://localhost:3000/products", {
+        fetch('http://localhost:3000/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

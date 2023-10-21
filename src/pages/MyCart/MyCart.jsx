@@ -41,7 +41,7 @@ const MyCart = () => {
 
   };
   useEffect(() => {
-    fetch("http://localhost:3000/myCart")
+    fetch('http://localhost:3000/myCart')
       .then((res) => res.json())
       .then((data) => {
         const userCart = data.filter(user => user.userEmail===email);

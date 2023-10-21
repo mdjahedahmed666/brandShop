@@ -29,9 +29,9 @@ const ProductCategory = () => {
   };
 
   return (
-    <div>
+    <div className="mt-16">
        <div className="flex justify-center">
-      <Slider className="h-full w-3/4" {...sliderSettings}>
+      <Slider className="h-full w-3/4 bg-slate-300" {...sliderSettings}>
           {category.map((product, index) => (
             <div key={index} className="h-40 md:h-96">
               <img src={product.photo} className="w-full h-full" alt={product.name} />

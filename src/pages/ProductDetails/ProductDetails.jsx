@@ -36,7 +36,7 @@ const ProductDetails = () => {
     };
 
     //send data to the server
-    fetch("http://localhost:3000/addToCart/", {
+    fetch('http://localhost:3000/addToCart', {
       method: "POST",
       headers: {
         "content-type": "application/json",
